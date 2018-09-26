@@ -1,0 +1,22 @@
+<!DOCTYPE >
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			播放视频
+		</title>
+	</head>
+	<body>
+		<div>
+			<iframe id="frame" width="100%" height="100%"></iframe>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var pre_url = 'http://api.xfsub.com/index.php?url=';
+		var url = window.location.search;
+		url = url.substr(url.indexOf('=') + 1, url.length);
+		var frame = document.getElementById('frame');
+		frame.src = pre_url + "'" + url + "'";
+		console.log(frame);
+	</script>
+</html>
